@@ -93,8 +93,12 @@ def defend_planets(state):
     #If we didn't find anything to care about, just return
     if len(doomed_planets) == 0:
         return True
-    #Use helper function that I will totally write soon to handle the planets that need help
-    return fulfil_fleets(state, doomed_planets)
+    #Convert the dictionary to something to output
+    fulfilment_list = []
+    for planet in doomed_planets:
+        for fleet in doomed_planets[planet]:
+            fulfilment_list.append((planet, fleet[0], fleet[1]))
+    return fulfil_fleets(state, fulfilment_list)
 
     
 #Helper function for sending fleets to places that need them
