@@ -129,5 +129,33 @@ def fulfil_fleets(state, requirements):
         if not fulfilled:
             satisfied = False
             #Log the failure
-            logging.debug("Failed to fulfil " + assignment[1] " ships at " assignment[0].ID " at time " assignemnt[2]".")
+            logging.debug("Failed to fulfil " + assignment[1] + " ships at " + assignment[0].ID + " at time " + assignemnt[2] + ".")
     return satisfied
+
+
+
+def spread_to_highest_producer(state):
+    print("where are we crashing")
+    #neutral planets only holds planets that we arent already going to
+    neutral_planets = [planet for planet in state.neutral_planets() 
+                      if not any(fleet.destination_planet == planet.ID for fleet in state.my_fleets())]
+    neutral_planets.sort(key=lambda p: p.growth_rate) #they are sorted for growth rate
+    #my planets only contains allied planets that do not have enemy ships heading towards them 
+    my_planets = [planet for planet in state.my_planets()
+                  if not any(fleet.destination_planet == planet.ID for fleet in state.enemy_fleets())]
+    my_planets.sort(key=lambda p: p.num_ships)
+    #sorted by num ships and reverse so highest first
+    my_planets.reverse()
+    
+
+    for planet in neutral_planets:
+        for me in my_planets:
+            required_ships = planet.num_ships + 1
+            if me.num_ships > required_ships:
+                return issue_order(state, me.ID, planet.ID, required_ships)
+            else:
+                #if we don't have enough ships with this planet, all of the others are smaller, so we definitely don't with those
+                break
+
+def attack_strongest_enemy_planet(state):
+    print("this does nothing")
