@@ -56,9 +56,9 @@ def defend_planets(state):
     #Go through each planet
     for planet in my_planets:
         #Get what is attacking it
-        my_planets[planet] = [fleet.destination_planet == planet.ID for fleet in attacking_fleets]
+        my_planets[planet] = [fleet for fleet in attacking_fleets if fleet.destination_planet == planet.ID ]
         #Fleets can only go to one place, so remove the excess for efficency
-        attacking_fleets = [fleet not in my_planets[planet] for fleet in attacking_fleets]
+        attacking_fleets = [fleet for fleet in attacking_fleets if fleet not in my_planets[planet]]
         #If this planet is being attacked, check to see if it can hold out
         if len(my_planets[planet]) != 0:
             my_planets[planet].sort(key = lambda f: f.turns_remaining)
@@ -105,7 +105,7 @@ def fulfil_fleets(state, requirements):
     destinations, required_ships, eta = zip(*requirements)
     #Only send fleets from planets that aren't destinations
     my_planets = state.my_planets()
-    usable_planets = [planet not in destinations for planet in my_planets]
+    usable_planets = [planet for planet in my_planets if planet not in destinations]
     #Keep track of whether we managed to satisfy everything
     satisfied = True
     #Start fulfilling all the things
