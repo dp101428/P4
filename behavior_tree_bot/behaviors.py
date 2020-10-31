@@ -134,7 +134,7 @@ def fulfil_fleets(state, requirements):
         if not fulfilled:
             satisfied = False
             #Log the failure
-            logging.debug("Failed to fulfil " + assignment[1] + " ships at " + assignment[0].ID + " at time " + assignment[2] + ".")
+            logging.debug("Failed to fulfil " + str(assignment[1]) + " ships at " + str(assignment[0].ID) + " at time " + str(assignment[2]) + ".")
     return satisfied
 
 
