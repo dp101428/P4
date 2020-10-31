@@ -27,7 +27,7 @@ def setup_behavior_tree():
 
     offensive_plan = Sequence(name='Offensive Strategy')
     largest_fleet_check = Check(have_largest_fleet)
-    attack = Action(attack_weakest_enemy_planet)
+    attack = Action(attack_strongest_enemy_planet)
     offensive_plan.child_nodes = [largest_fleet_check, attack]
 
     spread_sequence = Sequence(name='Spread Strategy')
@@ -35,12 +35,7 @@ def setup_behavior_tree():
     spread_action = Action(spread_to_highest_producer)
     spread_sequence.child_nodes = [neutral_planet_check, spread_action]
 
-    defensive_plan = Sequence(name='Defensive Strategy')
-    other_planet_check = Check(has_multiple_planets)
-    defend_action = Action(defend_planets)
-    defensive_plan.child_nodes = [other_planet_check, defend_action]
-
-    root.child_nodes = [offensive_plan, spread_sequence, defensive_plan, attack.copy()]
+    root.child_nodes = [offensive_plan, spread_sequence, attack.copy()]
 
     logging.info('\n' + root.tree_to_string())
     return root
