@@ -23,20 +23,37 @@ from planet_wars import PlanetWars, finish_turn
 def setup_behavior_tree():
     logging.debug("setting up tree")
     # Top-down construction of behavior tree
-    root = Selector(name='High Level Ordering of Strategies')
+    root = Sequence(name='Defensive and Origional Root')
+    root2 = Selector(name = 'High Level Ordering of Strategies')
+    logging.debug("roots are set up")
+
+
+    defensive_plan = Sequence(name = 'Deffensive Strategy')
+    logging.debug("defensive plan is created")
+    has_planets = Check(has_multiple_planets)
+    logging.debug("defensive plan is created")
+    defend = Action(defend_planets)
+    logging.debug("defensive plan is created")
+    defensive_plan.child_nodes[has_planets, defend]
+    logging.debug("defensive plan is created")
+    
+
 
     offensive_plan = Sequence(name='Offensive Strategy')
     largest_fleet_check = Check(have_largest_fleet)
     attack = Action(attack_strongest_enemy_planet)
     offensive_plan.child_nodes = [largest_fleet_check, attack]
-
+    logging.debug("offensive plan is created")
+    
+    
     spread_sequence = Sequence(name='Spread Strategy')
     neutral_planet_check = Check(if_neutral_planet_available)
     spread_action = Action(spread_to_highest_producer)
     spread_sequence.child_nodes = [neutral_planet_check, spread_action]
+    logging.debug("spread plan is created")
 
-    root.child_nodes = [offensive_plan, spread_sequence, attack.copy()]
-
+    root2.child_nodes = [offensive_plan, spread_sequence, attack.copy()]
+    root.child_nodes = [defensive_plan, root2]
     logging.info('\n' + root.tree_to_string())
     return root
 

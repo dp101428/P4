@@ -42,6 +42,7 @@ def spread_to_weakest_neutral_planet(state):
         return issue_order(state, strongest_planet.ID, weakest_planet.ID, strongest_planet.num_ships / 2)
 
 def defend_planets(state):
+    logging.debug("in defend planets")
     #Finds if any planet has more enemies incoming than it can hold off
     # Store the list of planets in a variable to prevent this algorithm from being too inefficient
     my_planets = dict.fromkeys(state.my_planets())
