@@ -1,6 +1,7 @@
 import sys
 sys.path.insert(0, '../')
 from planet_wars import issue_order
+import logging
 
 
 def attack_weakest_enemy_planet(state):
@@ -85,11 +86,48 @@ def defend_planets(state):
                         #Otherwise just add the difference between this and the last attack
                         else:
                             doomed_planets[planet].append(((-defenders) - doomed_planets[planet][-1][0] + 1, turns_in_future))
-                    
-        #Use helper function that I will totally write soon to handle the planets that need help
-        #fulfil_fleets(doomed_planets, doomed_planets.keys())
+        #To save time, stop looking at planets if there are no longer any fleets coming to them
+        if len(attacking_fleets) == 0:
+            break
+    #If we didn't find anything to care about, just return
+    if len(doomed_planets) == 0:
+        return True
+    #Use helper function that I will totally write soon to handle the planets that need help
+    return fulfil_fleets(state, doomed_planets)
 
     
-    #for fleet in attacking_fleets:
-    #    my_planets[state.planets[fleet.destination_planet]] = fleet
-    #return any(fleet.destination_planet in my_planets for fleet in state.enemy_fleets())
+#Helper function for sending fleets to places that need them
+#Argument is a list of tuples containing destination, required ships, time
+#If time is irrelevant, pass 0 for it
+def fulfil_fleets(state, requirements):
+    #Break the input into multiple tuples, might be useful
+    destinations, required_ships, eta = zip(*requirements)
+    #Only send fleets from planets that aren't destinations
+    my_planets = state.my_planets()
+    usable_planets = [planet not in destinations for planet in my_planets]
+    #Keep track of whether we managed to satisfy everything
+    satisfied = True
+    #Start fulfilling all the things
+    for assignment in requirements:
+        #Not yet fulfilled
+        fulfilled = False
+        #Go through the usable planets
+        for planet in usable_planets:
+            #Check range if it matters
+            if assignment[2] != 0 and state.distance(planet.ID, assignment[0].ID) > assignment[2]:
+                #If distance is bad, go to the next planet
+                continue
+            #Otherwise, check if we can send enough ships
+            if planet.num_ships > assignment[1]:
+                #If so, do it
+                issue_order(state, planet.ID, assignment[0].ID, assignment[1])
+                #record that it was fulfilled
+                fulfilled = True
+                #Go to the next assignment
+                break
+        #Check if we managed to fulfil it, if not we need to return false later
+        if not fulfilled:
+            satisfied = False
+            #Log the failure
+            logging.debug("Failed to fulfil " + assignment[1] " ships at " assignment[0].ID " at time " assignemnt[2]".")
+    return satisfied
