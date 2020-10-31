@@ -53,7 +53,7 @@ def setup_behavior_tree():
     logging.debug("spread plan is created")
 
     root2.child_nodes = [offensive_plan, spread_sequence, attack.copy()]
-    root.child_nodes = [defensive_plan, root2]
+    root.child_nodes = [root2, defensive_plan]
     logging.info('\n' + root.tree_to_string())
     return root
 

@@ -50,7 +50,7 @@ def defend_planets(state):
     #Doing this here rather than within the other list comprehension for efficiency purposes
     my_planets_IDs = [planet.ID for planet in my_planets]
     #Get list of enemy fleets incoming to them
-    attacking_fleets = [fleet.destination_planet in my_planets_IDs for fleet in state.enemy_fleets()]
+    attacking_fleets = [fleet for fleet in state.enemy_fleets() if fleet.destination_planet in my_planets_IDs]
     #Establish the list of planets that need help
     doomed_planets = {}
     #Go through each planet
