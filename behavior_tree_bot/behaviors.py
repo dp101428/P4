@@ -83,7 +83,7 @@ def defend_planets(state):
                     else:
                         #Check first if another fleet is arriving simultaniously
                         if doomed_planets[planet][-1][1] == turns_in_future:
-                            doomed_planets[planet][-1][0] = -defenders + 1
+                            doomed_planets[planet][-1] = (-defenders + 1, turns_in_future)
                         #Otherwise just add the difference between this and the last attack
                         else:
                             doomed_planets[planet].append(((-defenders) - doomed_planets[planet][-1][0] + 1, turns_in_future))
