@@ -134,12 +134,14 @@ def fulfil_fleets(state, requirements):
 
 
 
+
 def spread_to_highest_producer(state):
-    print("where are we crashing")
+    #print("where are we crashing")
     #neutral planets only holds planets that we arent already going to
     neutral_planets = [planet for planet in state.neutral_planets() 
                       if not any(fleet.destination_planet == planet.ID for fleet in state.my_fleets())]
     neutral_planets.sort(key=lambda p: p.growth_rate) #they are sorted for growth rate
+    neutral_planets.reverse()
     #my planets only contains allied planets that do not have enemy ships heading towards them 
     my_planets = [planet for planet in state.my_planets()
                   if not any(fleet.destination_planet == planet.ID for fleet in state.enemy_fleets())]
@@ -158,4 +160,24 @@ def spread_to_highest_producer(state):
                 break
 
 def attack_strongest_enemy_planet(state):
-    print("this does nothing")
+    #print("this does nothing")
+    enemy_planets = [planet for planet in state.enemy_planets() 
+                      if not any(fleet.destination_planet == planet.ID for fleet in state.my_fleets())]
+    enemy_planets.sort(key=lambda p: p.num_ships) #they are sorted for number of ships
+    enemy_planets.reverse()
+    #my planets only contains allied planets that do not have enemy ships heading towards them 
+    my_planets = [planet for planet in state.my_planets()
+                  if not any(fleet.destination_planet == planet.ID for fleet in state.enemy_fleets())]
+    my_planets.sort(key=lambda p: p.num_ships)
+    #sorted by num ships and reverse so highest first
+    my_planets.reverse()
+
+    for planet in enemy_planets:
+        for me in my_planets:
+            required_ships = planet.num_ships + \
+                                 state.distance(me.ID, planet.ID) * planet.growth_rate + 1
+            if me.num_ships > required_ships:
+                return issue_order(state, me.ID, planet.ID, required_ships)
+            else:
+                #if we don't have enough ships with this planet, all of the others are smaller, so we definitely don't with those
+                break
