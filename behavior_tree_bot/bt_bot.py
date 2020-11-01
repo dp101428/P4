@@ -29,13 +29,13 @@ def setup_behavior_tree():
 
 
     defensive_plan = Sequence(name = 'Deffensive Strategy')
-    logging.debug("defensive plan is created")
+    #logging.debug("defensive plan is created")
     has_planets = Check(has_multiple_planets)
-    logging.debug("defensive plan is created")
+    #logging.debug("defensive plan is created")
     defend = Action(defend_planets)
-    logging.debug("defensive plan is created")
+    #logging.debug("defensive plan is created")
     defensive_plan.child_nodes = [has_planets, defend]
-    logging.debug("defensive plan is created")
+    #logging.debug("defensive plan is created")
     
 
 

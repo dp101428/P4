@@ -1,9 +1,5 @@
 DEBUG:root:setting up tree
 DEBUG:root:roots are set up
-DEBUG:root:defensive plan is created
-DEBUG:root:defensive plan is created
-DEBUG:root:defensive plan is created
-DEBUG:root:defensive plan is created
 DEBUG:root:offensive plan is created
 DEBUG:root:spread plan is created
 INFO:root:
@@ -30,7 +26,7 @@ DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
 DEBUG:root:Result: Check: if_neutral_planet_available -> Success
 DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Order:1 22 81.0
+DEBUG:root:Order:1 22 39.0
 DEBUG:root:Result: Action: spread_to_highest_producer -> Success
 DEBUG:root:Result: Sequence: Spread Strategy -> Success
 DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
@@ -51,7 +47,49 @@ DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
 DEBUG:root:Result: Check: if_neutral_planet_available -> Success
 DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Order:1 10 2.0
+DEBUG:root:Order:1 21 39.0
+DEBUG:root:Result: Action: spread_to_highest_producer -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Failure
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Order:1 0 16.0
+DEBUG:root:Result: Action: spread_to_highest_producer -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Failure
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Order:1 6 16.0
 DEBUG:root:Result: Action: spread_to_highest_producer -> Success
 DEBUG:root:Result: Sequence: Spread Strategy -> Success
 DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
@@ -84,25 +122,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
 DEBUG:root:Executing:Action: attack_strongest_enemy_planet
 DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -158,199 +180,15 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
 DEBUG:root:Executing:Action: attack_strongest_enemy_planet
 DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
 DEBUG:root:Result: Check: if_neutral_planet_available -> Success
 DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
-DEBUG:root:Executing:Action: attack_strongest_enemy_planet
-DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
-DEBUG:root:Executing:Action: attack_strongest_enemy_planet
-DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
-DEBUG:root:Executing:Action: attack_strongest_enemy_planet
-DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
-DEBUG:root:Executing:Action: attack_strongest_enemy_planet
-DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Order:10 18 4.0
-DEBUG:root:Result: Action: spread_to_highest_producer -> Success
-DEBUG:root:Result: Sequence: Spread Strategy -> Success
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
-DEBUG:root:Executing:Sequence: Deffensive Strategy
-DEBUG:root:Executing:Check: has_multiple_planets
-DEBUG:root:Result: Check: has_multiple_planets -> Success
-DEBUG:root:Executing:Action: defend_planets
-DEBUG:root:in defend planets
-DEBUG:root:Failed to fulfil 4.0 ships at 1 at time 3.
-DEBUG:root:Result: Action: defend_planets -> Failure
-DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Order:10 17 4.0
-DEBUG:root:Result: Action: spread_to_highest_producer -> Success
-DEBUG:root:Result: Sequence: Spread Strategy -> Success
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
-DEBUG:root:Executing:Sequence: Deffensive Strategy
-DEBUG:root:Executing:Check: has_multiple_planets
-DEBUG:root:Result: Check: has_multiple_planets -> Success
-DEBUG:root:Executing:Action: defend_planets
-DEBUG:root:in defend planets
-DEBUG:root:Failed to fulfil 4.0 ships at 1 at time 2.
-DEBUG:root:Result: Action: defend_planets -> Failure
-DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Order:10 12 9.0
-DEBUG:root:Result: Action: spread_to_highest_producer -> Success
-DEBUG:root:Result: Sequence: Spread Strategy -> Success
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
-DEBUG:root:Executing:Sequence: Deffensive Strategy
-DEBUG:root:Executing:Check: has_multiple_planets
-DEBUG:root:Result: Check: has_multiple_planets -> Success
-DEBUG:root:Executing:Action: defend_planets
-DEBUG:root:in defend planets
-DEBUG:root:Failed to fulfil 4.0 ships at 1 at time 1.
-DEBUG:root:Result: Action: defend_planets -> Failure
-DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Order:10 11 9.0
-DEBUG:root:Result: Action: spread_to_highest_producer -> Success
-DEBUG:root:Result: Sequence: Spread Strategy -> Success
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
-DEBUG:root:Executing:Sequence: Deffensive Strategy
-DEBUG:root:Executing:Check: has_multiple_planets
-DEBUG:root:Result: Check: has_multiple_planets -> Failure
-DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Order:10 14 9.0
+DEBUG:root:Order:1 18 27.0
 DEBUG:root:Result: Action: spread_to_highest_producer -> Success
 DEBUG:root:Result: Sequence: Spread Strategy -> Success
 DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
@@ -368,49 +206,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
 DEBUG:root:Executing:Action: attack_strongest_enemy_planet
 DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Order:10 13 9.0
-DEBUG:root:Result: Action: spread_to_highest_producer -> Success
-DEBUG:root:Result: Sequence: Spread Strategy -> Success
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
-DEBUG:root:Executing:Sequence: Deffensive Strategy
-DEBUG:root:Executing:Check: has_multiple_planets
-DEBUG:root:Result: Check: has_multiple_planets -> Success
-DEBUG:root:Executing:Action: defend_planets
-DEBUG:root:in defend planets
-DEBUG:root:Result: Action: defend_planets -> Success
-DEBUG:root:Result: Sequence: Deffensive Strategy -> Success
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Success
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -446,7 +244,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -464,96 +264,337 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
 DEBUG:root:Executing:Action: attack_strongest_enemy_planet
-DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
-DEBUG:root:Executing:Action: attack_strongest_enemy_planet
-DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
-DEBUG:root:Executing:Action: attack_strongest_enemy_planet
-DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
-DEBUG:root:Executing:Action: attack_strongest_enemy_planet
-DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
-DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
-DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
-DEBUG:root:Finish turn
-
-DEBUG:root:Executing:Sequence: Defensive and Origional Root
-DEBUG:root:Executing:Selector: High Level Ordering of Strategies
-DEBUG:root:Executing:Sequence: Offensive Strategy
-DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
-DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
-DEBUG:root:Executing:Sequence: Spread Strategy
-DEBUG:root:Executing:Check: if_neutral_planet_available
-DEBUG:root:Result: Check: if_neutral_planet_available -> Success
-DEBUG:root:Executing:Action: spread_to_highest_producer
-DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
-DEBUG:root:Result: Sequence: Spread Strategy -> Failure
-DEBUG:root:Executing:Action: attack_strongest_enemy_planet
-DEBUG:root:Order:22 17 42.0
+DEBUG:root:Order:21 17 40.0
 DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
 DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
 DEBUG:root:Executing:Sequence: Deffensive Strategy
 DEBUG:root:Executing:Check: has_multiple_planets
 DEBUG:root:Result: Check: has_multiple_planets -> Success
 DEBUG:root:Executing:Action: defend_planets
 DEBUG:root:in defend planets
-DEBUG:root:Failed to fulfil 2.0 ships at 10 at time 4.
+DEBUG:root:Order:1 18 12.0
+DEBUG:root:Result: Action: defend_planets -> Success
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Success
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Order:1 10 37.0
+DEBUG:root:Result: Action: spread_to_highest_producer -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Result: Action: defend_planets -> Success
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Success
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Order:21 9 37.0
+DEBUG:root:Result: Action: spread_to_highest_producer -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Result: Action: defend_planets -> Success
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Success
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Order:1 12 44.0
+DEBUG:root:Result: Action: spread_to_highest_producer -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Failed to fulfil 19.0 ships at 22 at time 2.
 DEBUG:root:Result: Action: defend_planets -> Failure
 DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
 DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
@@ -563,7 +604,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -581,7 +624,57 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Order:21 11 44.0
+DEBUG:root:Result: Action: spread_to_highest_producer -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Failed to fulfil 26.0 ships at 10 at time 10.
+DEBUG:root:Result: Action: defend_planets -> Failure
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Order:0 5 23.0
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Failed to fulfil 26.0 ships at 10 at time 9.
+DEBUG:root:Result: Action: defend_planets -> Failure
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -599,7 +692,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -617,7 +712,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -635,7 +732,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -653,7 +752,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -671,7 +772,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -689,7 +792,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -707,7 +812,70 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Order:1 5 46.0
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Failed to fulfil 26.0 ships at 10 at time 1.
+DEBUG:root:Result: Action: defend_planets -> Failure
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Order:0 10 38.0
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Result: Action: defend_planets -> Success
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Success
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Order:21 17 29.0
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Result: Action: defend_planets -> Success
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Success
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -725,7 +893,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -743,7 +913,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -761,7 +933,9 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -779,7 +953,61 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Order:6 14 60.0
+DEBUG:root:Result: Action: spread_to_highest_producer -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Result: Action: defend_planets -> Success
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Success
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Order:21 13 60.0
+DEBUG:root:Result: Action: spread_to_highest_producer -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Result: Action: defend_planets -> Success
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Success
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -797,7 +1025,35 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Order:1 4 62.0
+DEBUG:root:Result: Action: spread_to_highest_producer -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Result: Action: defend_planets -> Success
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Success
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Success
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -815,7 +1071,36 @@ DEBUG:root:Executing:Sequence: Defensive and Origional Root
 DEBUG:root:Executing:Selector: High Level Ordering of Strategies
 DEBUG:root:Executing:Sequence: Offensive Strategy
 DEBUG:root:Executing:Check: have_largest_fleet
-DEBUG:root:Result: Check: have_largest_fleet -> Failure
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Order:0 3 62.0
+DEBUG:root:Result: Action: spread_to_highest_producer -> Success
+DEBUG:root:Result: Sequence: Spread Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Failed to fulfil 43.0 ships at 11 at time 1.
+DEBUG:root:Result: Action: defend_planets -> Failure
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
 DEBUG:root:Executing:Sequence: Spread Strategy
 DEBUG:root:Executing:Check: if_neutral_planet_available
@@ -826,6 +1111,134 @@ DEBUG:root:Result: Sequence: Spread Strategy -> Failure
 DEBUG:root:Executing:Action: attack_strongest_enemy_planet
 DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
 DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Sequence: Offensive Strategy -> Failure
+DEBUG:root:Executing:Sequence: Spread Strategy
+DEBUG:root:Executing:Check: if_neutral_planet_available
+DEBUG:root:Result: Check: if_neutral_planet_available -> Success
+DEBUG:root:Executing:Action: spread_to_highest_producer
+DEBUG:root:Result: Action: spread_to_highest_producer -> Failure
+DEBUG:root:Result: Sequence: Spread Strategy -> Failure
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Failure
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Failure
+DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
+DEBUG:root:Finish turn
+
+DEBUG:root:Executing:Sequence: Defensive and Origional Root
+DEBUG:root:Executing:Selector: High Level Ordering of Strategies
+DEBUG:root:Executing:Sequence: Offensive Strategy
+DEBUG:root:Executing:Check: have_largest_fleet
+DEBUG:root:Result: Check: have_largest_fleet -> Success
+DEBUG:root:Executing:Action: attack_strongest_enemy_planet
+DEBUG:root:Order:21 11 53.0
+DEBUG:root:Result: Action: attack_strongest_enemy_planet -> Success
+DEBUG:root:Result: Sequence: Offensive Strategy -> Success
+DEBUG:root:Result: Selector: High Level Ordering of Strategies -> Success
+DEBUG:root:Executing:Sequence: Deffensive Strategy
+DEBUG:root:Executing:Check: has_multiple_planets
+DEBUG:root:Result: Check: has_multiple_planets -> Success
+DEBUG:root:Executing:Action: defend_planets
+DEBUG:root:in defend planets
+DEBUG:root:Failed to fulfil 2.0 ships at 10 at time 7.
+DEBUG:root:Failed to fulfil 7.0 ships at 10 at time 8.
+DEBUG:root:Order:18 10 0.0
+DEBUG:root:Order:1 10 10.0
+DEBUG:root:Order:0 10 -1.0
+DEBUG:root:Order:0 10 11.0
+DEBUG:root:Order:0 10 -2.0
+DEBUG:root:Failed to fulfil 46.0 ships at 13 at time 7.
+DEBUG:root:Result: Action: defend_planets -> Failure
+DEBUG:root:Result: Sequence: Deffensive Strategy -> Failure
 DEBUG:root:Result: Sequence: Defensive and Origional Root -> Failure
 DEBUG:root:Finish turn
 
