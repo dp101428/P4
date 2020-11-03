@@ -114,6 +114,9 @@ def fulfil_fleets(state, requirements):
     satisfied = True
     #Start fulfilling all the things
     for assignment in requirements:
+        #Just to make sure
+        if assignment[1] <= 0:
+            continue
         #Not yet fulfilled
         fulfilled = False
         #Go through the usable planets

@@ -28,7 +28,7 @@ def setup_behavior_tree():
     logging.debug("roots are set up")
 
 
-    defensive_plan = Sequence(name = 'Deffensive Strategy')
+    defensive_plan = Sequence(name = 'Defensive Strategy')
     logging.debug("defensive plan is created")
     has_planets = Check(has_multiple_planets)
     logging.debug("defensive plan is created")
