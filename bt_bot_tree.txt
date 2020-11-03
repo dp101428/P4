@@ -1,0 +1,13 @@
+INFO:root:
+Sequence: Defensive and Origional Root
+| Selector: High Level Ordering of Strategies
+| | Sequence: Offensive Strategy
+| | | Check: have_largest_fleet
+| | | Action: attack_strongest_enemy_planet
+| | Sequence: Spread Strategy
+| | | Check: if_neutral_planet_available
+| | | Action: spread_to_highest_producer
+| | Action: attack_strongest_enemy_planet
+| Sequence: Deffensive Strategy
+| | Check: has_multiple_planets
+| | Action: defend_planets
